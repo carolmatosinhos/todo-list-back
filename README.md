@@ -20,3 +20,6 @@ Este aplicativo foi desenvolvido utilizando as seguintes tecnologias:
 - Angular
 - Bootstrap
 - HTML/CSS/TypeScript
+
+## Layout
+![image](https://user-images.githubusercontent.com/82350877/235216662-87b71096-2fdd-478a-af04-0cee8b7fe035.png)
