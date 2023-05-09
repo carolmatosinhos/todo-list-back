@@ -7,19 +7,28 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { FormsModule } from '@angular/forms';
 import { UsersComponent } from './users/users.component';
 import { UsersService } from './users.service';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
-    UsersComponent
+    UsersComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
-  providers: [UsersService, HttpClientModule], //provider = fornecedor. São os serviços fornecedores
-  bootstrap: [AppComponent]
+  providers: [
+    UsersService,
+    HttpClientModule
+  ], //provider = fornecedor. São os serviços fornecedores
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

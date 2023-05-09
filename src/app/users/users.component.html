@@ -15,7 +15,7 @@
         <th scope="row">{{ user.id }}</th>
         <td>{{ user.name }}</td>
         <td class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button type="button" class="btn btn-outline-dark btn-sm">
+          <button routerLink="/users/{{ user.id }}/todos" type="button" class="btn btn-outline-dark btn-sm">
             Ver tarefas
           </button>
         </td>
