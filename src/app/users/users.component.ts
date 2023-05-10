@@ -9,9 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class UsersComponent implements OnInit {
   users: Array<any> = new Array(); //declarando a variavel users. A variavel começa sem nenhum valor. O código também inicializa a variável com um novo array vazio usando o construtor "new Array()".
 
-  constructor(private userService: UsersService ) {
-
-  }
+  constructor(private userService: UsersService ) {  }
 
   ngOnInit() {
     this.listUsers()

@@ -1,4 +1,7 @@
 <div *ngIf="listtodo">
-  <p>ID: {{ listtodo.userId }}</p>
-  <p>Tarefa: {{listtodo.title}}</p>
+  <p>id: {{ listtodo.id }}</p>
+</div>
+
+<div *ngIf="!listtodo">
+  <p>Loading...</p>
 </div>

@@ -12,13 +12,22 @@ import { UsersService } from '../users.service';
 export class UserDetailComponent {
   listtodo?: ListTodo
 
-  constructor(private usersService: UsersService, private route: ActivatedRoute){
+  constructor(private usersService: UsersService, private route: ActivatedRoute) {
     this.getListTodo()
   }
 
-    getListTodo() {
-      const id = Number(this.route.snapshot.paramMap.get("id"))
-      return this.usersService.getTask(id).subscribe((listtodo) => (this.listtodo = listtodo));
-    }
+  ngOnInit() {
+    this.getListTodo();
   }
+
+  getListTodo() {
+    const id = Number(this.route.snapshot.paramMap.get("id"))
+    this.usersService.getTask(id).subscribe((listtodo) => {
+      this.listtodo = listtodo;
+      console.log(listtodo)
+    })
+
+  }
+
+}
 
