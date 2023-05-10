@@ -4,7 +4,8 @@
       <tr>
         <th scope="col" class="col-2">#id da Tarefa</th>
         <th scope="col">Tarefa</th>
-        <th scope="col" class="col-1">Completa</th>
+        <th scope="col">Status</th>
+        <th scope="col">Ações</th>
       </tr>
     </thead>
 
@@ -16,6 +17,11 @@
           <i *ngIf="list.completed" class="bi bi-check"></i>
           <i *ngIf="!list.completed" class="bi bi-exclamation"></i>
         </td>
+        <th scope="row">
+          <button type="button" class="btn btn-outline-primary">Editar</button>
+
+          <button type="button" class="btn btn-outline-danger" (click)="removeTask(list.id!)">Remover</button>
+        </th>
       </tr>
     </tbody>
   </table>
