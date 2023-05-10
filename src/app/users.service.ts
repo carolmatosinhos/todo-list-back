@@ -15,7 +15,7 @@ export class UsersService {
     return this.http.get(this.apiUrl);
   }
 
-  getTask(id: number): Observable<ListTodo> {
-    return this.http.get<ListTodo>(`${this.apiUrl}/${id}/todos`);
+  getTask(id: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/${id}/todos`);
   }
 }

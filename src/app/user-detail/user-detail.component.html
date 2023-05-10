@@ -1,7 +1,25 @@
-<div *ngIf="listtodo">
-  <p>id: {{ listtodo.id }}</p>
-</div>
+<div class="container">
+  <table class="table">
+    <thead class="table-light">
+      <tr>
+        <th scope="col" class="col-2">#id da Tarefa</th>
+        <th scope="col">Tarefa</th>
+        <th scope="col" class="col-1">Completa</th>
+      </tr>
+    </thead>
 
-<div *ngIf="!listtodo">
-  <p>Loading...</p>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let list of listtodo">
+        <th scope="row">{{ list.id }}</th>
+        <td>{{ list.title }}</td>
+        <td class="text-center">
+          <i *ngIf="list.completed" class="bi bi-check"></i>
+          <i *ngIf="!list.completed" class="bi bi-exclamation"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="!listtodo">
+    <p>Loading...</p>
+  </div>
 </div>

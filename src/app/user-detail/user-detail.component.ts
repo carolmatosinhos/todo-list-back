@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ListTodo } from '../ListTodo';
 import { ActivatedRoute } from '@angular/router';
 import { UsersService } from '../users.service';
+import { UsersComponent } from '../users/users.component';
+
 
 
 @Component({
@@ -10,7 +12,7 @@ import { UsersService } from '../users.service';
   styleUrls: ['./user-detail.component.scss']
 })
 export class UserDetailComponent {
-  listtodo?: ListTodo
+  listtodo: ListTodo[] = [];
 
   constructor(private usersService: UsersService, private route: ActivatedRoute) {
     this.getListTodo()
@@ -26,8 +28,6 @@ export class UserDetailComponent {
       this.listtodo = listtodo;
       console.log(listtodo)
     })
-
   }
-
 }
 
