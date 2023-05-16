@@ -1,8 +1,8 @@
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
-import { UserDetailComponent } from './user-detail/user-detail.component';
-import { UsersComponent } from './users/users.component';
+import { UserDetailComponent } from './todo-list/user-detail/user-detail.component';
+import { UsersComponent } from './todo-list/users/users.component';
 
 
 const routes: Routes = [
